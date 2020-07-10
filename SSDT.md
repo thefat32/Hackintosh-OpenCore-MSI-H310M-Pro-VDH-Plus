@@ -223,7 +223,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                 "port-count", 
                 Buffer (0x04)
                 {
-                     0x0E, 0x00, 0x00, 0x00                           // ....
+                     0x1A, 0x00, 0x00, 0x00                           // ....
                 }, 
 
                 "ports", 
@@ -333,7 +333,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                         "port", 
                         Buffer (0x04)
                         {
-                             0x0D, 0x00, 0x00, 0x00                           // ....
+                             0x13, 0x00, 0x00, 0x00                           // ....
                         }
                     }, 
 
@@ -345,7 +345,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                         "port", 
                         Buffer (0x04)
                         {
-                             0x0E, 0x00, 0x00, 0x00                           // ....
+                             0x14, 0x00, 0x00, 0x00                           // ....
                         }
                     }
                 }
