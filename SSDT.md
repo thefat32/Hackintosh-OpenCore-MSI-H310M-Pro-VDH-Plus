@@ -72,7 +72,7 @@ DefinitionBlock ("", "SSDT", 2, "Slav", "SsdtUsbx", 0x00001000)
 }
 ```
 
-## Power Managment (PLUG)
+## Power Managment (PLUG)
 
 - Processor Path: _PR.PR00
 
@@ -227,13 +227,25 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                 }, 
 
                 "ports", 
-                Package (0x14)
+                Package (0x18)
                 {
+                    "HS01", 
+                    Package (0x04)
+                    {
+                        "UsbConnector", 
+                        0x03, 
+                        "port", 
+                        Buffer (0x04)
+                        {
+                             0x01, 0x00, 0x00, 0x00                           // ....
+                        }
+                    }, 
+
                     "HS03", 
                     Package (0x04)
                     {
                         "UsbConnector", 
-                        Zero, 
+                        0x03, 
                         "port", 
                         Buffer (0x04)
                         {
@@ -245,7 +257,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                     Package (0x04)
                     {
                         "UsbConnector", 
-                        Zero, 
+                        0x03, 
                         "port", 
                         Buffer (0x04)
                         {
@@ -257,7 +269,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                     Package (0x04)
                     {
                         "UsbConnector", 
-                        Zero, 
+                        0x03, 
                         "port", 
                         Buffer (0x04)
                         {
@@ -269,7 +281,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                     Package (0x04)
                     {
                         "UsbConnector", 
-                        Zero, 
+                        0x03, 
                         "port", 
                         Buffer (0x04)
                         {
@@ -281,7 +293,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                     Package (0x04)
                     {
                         "UsbConnector", 
-                        Zero, 
+                        0x03, 
                         "port", 
                         Buffer (0x04)
                         {
@@ -293,7 +305,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                     Package (0x04)
                     {
                         "UsbConnector", 
-                        Zero, 
+                        0x03, 
                         "port", 
                         Buffer (0x04)
                         {
@@ -305,7 +317,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                     Package (0x04)
                     {
                         "UsbConnector", 
-                        Zero, 
+                        0x03, 
                         "port", 
                         Buffer (0x04)
                         {
@@ -317,11 +329,23 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
                     Package (0x04)
                     {
                         "UsbConnector", 
-                        Zero, 
+                        0x03, 
                         "port", 
                         Buffer (0x04)
                         {
                              0x0A, 0x00, 0x00, 0x00                           // ....
+                        }
+                    }, 
+
+                    "SS01", 
+                    Package (0x04)
+                    {
+                        "UsbConnector", 
+                        0x03, 
+                        "port", 
+                        Buffer (0x04)
+                        {
+                             0x11, 0x00, 0x00, 0x00                           // ....
                         }
                     }, 
 
@@ -353,5 +377,4 @@ DefinitionBlock ("", "SSDT", 2, "hack", "_UIAC", 0x00000000)
         })
     }
 }
-
 ```
